@@ -18,6 +18,7 @@ const db = require('./connection/connect')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static('public'));
 
 //express json
 app.use(express.json());
@@ -56,7 +57,8 @@ app.post('/login_user', [
             res.cookie('loggedIn', false);
             res.redirect('/home');
         } else {
-            res.render('./error/error')
+            // res.render('./error/error')
+            res.redirect('/login?err=1');
         }
     });
 });
