@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+
+    <style>
+        tr, td{
+            margin: 20px;
+            padding: 10px;
+            width: 500px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            flex-direction: none;
+        }
+        a:hover{
+            text-decoration: none;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: black;
+        }
+    </style>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h2>BIMBINGAN KONSELING</h2>
+        <p><%= tag %></p>
+
+        <table border="5px">
+                <tr>
+                    <td><center>Nama</center></td>
+                    <td><center>Alasan</center></td>
+                    <td><center>Tanggal dan waktu</center></td>
+                </tr>
+            <% nama.forEach((nama)=>{ %>
+                <tr>
+                    <td><%= nama.name %></td>
+                    <td><%= nama.alasan %>hallo ini sena dan ani</td>
+                    <td><%= nama.Tanggal_dan_waktu %> hallo ini ani</td>
+                </tr>
+            <% }); %>
+        </table>
+        <br>
+        <br>
+        <div>
+            <center>
+                <button type="button" class="btn btn-success shadow-lg bg-body-tertiary rounded" style="margin-right: 20px;"><a href="/sharing">SHARING</a></button>
+                <button type="button" class="btn btn-success shadow-lg bg-body-tertiary rounded" style="margin-right: 20px; margin-left: 20px;"><a href="/permision">PERMISION</a></button>
+                <button type="button" class="btn btn-success shadow-lg bg-body-tertiary rounded" style="margin-left: 20px;"><a href="/konsultasi">KONSULTASI</a></button>
+            </center>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

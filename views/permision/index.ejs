@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharing</title>
+</head>
+<body>
+    <center>
+        <div class="judul">
+            <H1>IJIN MENDAHULUI PULANG</H1>
+        </div>
+        <div class="container">
+            <div class="colums">
+                <table style="width: 600px;" border="5px">
+                    <tr>
+                        <th>NAMA</th>
+                        <th>ALASAN</th>
+                        <th>TANGGAL</th>
+                        <th>KELAS</th>
+                        <th>WAKTU</th>
+                        <th>ALAMAT</th>
+                        <th>NO. HP</th>
+                        <th>GURU PIKET</th>
+                        <th>GURU WALI</th>
+                        <th>HAPUS</th>
+                    </tr>
+                    <% isi.forEach((isi)=>{ %>
+                        <tr>
+                            <td><%= isi.nama %></td>
+                            <td><%= isi.alasan %></td>
+                            <td><%= isi.tanggal %></td>
+                            <td><%= isi.kelas %></td>
+                            <td><%= isi.waktu %></td>
+                            <td><%= isi.alamat %></td>
+                            <td><%= isi.noHP %></td>
+                            <td><%= isi.guruPiket %></td>
+                            <td><%= isi.guruWali %></td>
+                            <td><a href="/permision/hapus" style="text-decoration: none; color: black;">HAPUS</a></td>
+                        </tr>
+                    <% }) %>
+                </table>
+            </div>
+            <div class="kirim_masalah">
+                <div class="pesan">
+                    <button type="submit" style="background-color: aqua; width: 200px; height: 30px; margin-top: 40px;"><b><a href="/permision/surat_ijin/form" style="color: black; text-decoration: none;">BUAT SURAT IJIN</a></b></button>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

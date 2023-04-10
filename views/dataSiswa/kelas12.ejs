@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body { 
+        padding-top:40px; 
+        width: 100%;
+    }
+    h1{
+        width: 100%;
+        float: center;
+    }
+    table{
+        width: 100%;
+        height: auto;
+    }
+</style>
+    <title><%= title %></title>
+</head>
+<body class="container">
+    <div class="jumbotron">
+        <center><h1><%= title %></h1></center>
+        <table border="5px">
+            <tr>
+                <td>NAMA</td>
+                <td>NIS</td>
+                <td>KELAS</td>
+            </tr>
+            <% items.forEach((items)=>{ %>
+            <tr>
+                <td><%= items.NAMA %></td>
+                <td><%= items.NIS %></td>
+                <td><%= items.KELAS %></td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+</body>
+</html>

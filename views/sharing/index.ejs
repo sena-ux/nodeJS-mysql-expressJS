@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharing</title>
+</head>
+<body>
+    <center>
+        <div class="judul">
+            <H1>SHARING PERMASALAHAN</H1>
+        </div>
+        <div class="container">
+            <div class="colums">
+                <table style="width: 600px;" border="5px">
+                    <tr>
+                        <th>NAMA</th>
+                        <th>PERMASALAHAN</th>
+                        <th>TANGGAL</th>
+                        <th>KELAS</th>
+                        <th>HAPUS</th>
+                    </tr>
+                    <% items.forEach((items)=>{ %>
+                    <tr>
+                        <td><%= items.nama %></td>
+                        <td><%= items.masalah %></td>
+                        <td><%= items.tanggal %></td>
+                        <td><%= items.kelas %></td>
+                        <td><a href="/sharing/hapus?nama=<%= items.nama %>" style="text-decoration: none; color: black;">Hapus</a></td>
+                    </tr>
+                    <% }); %>
+                </table>
+            </div>
+            <div class="kirim_masalah">
+                <div class="pesan">
+                    <button type="submit" style="background-color: aqua; width: 200px; height: 30px; margin-top: 40px;"><b><a href="/sharing/pesan" style="color: black; text-decoration: none;">AJUKAN PERMASALAHAN</a></b></button>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
